@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body , html {
+		margin:0;
+		padding:0;
+		text-align:center;
+	}
+	.container  {
+
+	}
+	#progresscontainer  {
+		width:100%;
+		background:#ddd;
+}
+     #progress  {
+        width:10%;
+        height:30px;
+        background:#337ab7;
+}
+
+     </style>
+<body>
+	<h1> We will create simple css and js progress-bar </h1>
+        <div class="container">
+	<div id="progresscontainer">
+       <div id="progress">     	
+       </div>		
+       </div>
+	   </div>
+	   <button onclick="progress()"> click here to increse the progress</button>
+	    <!-- when button is clicked we increase we increase progress-bar -->
+	   <script>
+	   	         function progress() {
+	   	         	var e1 = document.getElementById('progress');
+	   	         	var width = 1;
+	   	         	var id = setInterval(frame,1000);
+
+	   	         	function frame()  {
+	   	         		if(width >= 100) {
+	   	         			clearInterval(id);
+	   	         	} else {
+	   	         		width++;
+	   	         		e1.style.width = width + '%'
+                          }
+	   	         	}
+	   	         	}
+
+	   </script> 
+	
+</body>
+</html>
